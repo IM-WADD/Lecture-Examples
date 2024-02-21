@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Positioning Example</title>
+        <link href="styles.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <p>This header is fixed</p>
+            <nav>
+                <ul>
+                    <li class="normal">Normal position</li>
+                    <li class="relative">Relative position (left:20px)</li>
+                    <li class="absolute">Absolute position (right:20px)</li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="container" id="top-container">
+                <p>This container div is not positioned. Elements inside this div are red.</p>
+                <div class="normal"><p>Normal</p></div>
+                <div class="relative"><p>Relative (top:0; right:50px)</p></div>
+                <div class="absolute"><p>Absolute (top:0; right:0)</p></div>
+                <div class="sticky"><p>Sticky (top:200px)</p></div>
+            </div>
+            <div class="container relative" id="bottom-container">
+                <p>This container div has relative position. Elements inside this div are purple.</p>
+                <div class="normal"><p>Normal</p></div>
+                <div class="relative"><p>Relative (top:0; right:50px)</p></div>
+                <div class="absolute"><p>Absolute (top:0; right:0)</p></div>
+                <div class="sticky"><p>Sticky (top:200px)</p></div>
+            </div>
+        </main>
+    </body>
+</html>

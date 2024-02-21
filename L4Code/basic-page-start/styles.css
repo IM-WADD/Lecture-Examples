@@ -1,0 +1,44 @@
+/* I am a CSS comment. Notice I am different from an HTML comment */
+body {
+    margin-left:5vw;
+    margin-right:5vw;
+    padding:0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: rgb(161, 31, 31);
+}
+
+.title {
+    font-size: 48px;
+    margin-bottom: 0;
+}
+
+.subtitle {
+    margin-top:0;
+}
+
+#rainier {
+    width: 30vw;
+    max-width: 600px;
+    min-width: 200px;
+}
+
+nav li {
+    display: inline;
+    background-color: black;
+    padding:12px;
+    color:white;
+    border-radius: 6px;
+    margin-right: 6px;
+}
+
+nav li a {
+    color:white;
+    text-decoration:none;
+}
+
+nav li a:hover, nav li:hover {
+    background-color: aqua;
+}
