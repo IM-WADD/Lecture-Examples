@@ -1,0 +1,26 @@
+.container {
+    display:flex;
+    padding:2em;
+}
+
+.img-box {
+    width: 10vw;
+    display: flex;
+    margin-right: 2em;
+}
+
+.callout {
+    background-color: black;
+    color: white;
+}
+
+img {
+    display: flex;
+    width: 400px;
+    margin-right: 2em;
+}
+
+p {
+    display: flex;
+    flex-direction: column;
+}
