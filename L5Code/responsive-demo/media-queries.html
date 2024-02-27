@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- The primary stylesheet-->
+        <link href="styles/main.css" type="text/css" rel="stylesheet">
+        <!-- Provides additional styles for responsiveness-->
+        <link href="styles/media-queries-styles.css" type="text/css" rel="stylesheet">
+
+        <!-- The following pulls in free icons from Font Awesome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        
+        <title>Responsive Demo</title>
+    </head>
+    <body>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Not Responsive</a></li>
+                <li><a href="#"  class="selected">Media Queries</a></li>
+                <li><a href="flexbox.html">Flexbox</a></li>
+            </ul>
+        </nav>
+        <header class="content-panel">
+            <h1>Responsive Layouts</h1>
+        </header>
+        <main>
+            <div class="content-panel">
+                <!-- The empty div is a way to force the inline-block element into the middle -->
+                <div class="content-narrow decorative"></div>
+                <div class="content-wide">
+                    <h1>Media Queries</h1>
+                    <p>This page adds the viewport meta tag to prevent scaling. Media queries 
+                        are used to create a fluid layout. When the width of the screen is less 
+                        than 600px, some font sizes and margins are adjusted, decorative elements 
+                        are not displayed, and the menu layout is changed. 
+                    </p>
+                    <p>Columns are still created using the inline-block approach and all classes are the 
+                        same as in the non-responsive page.</p>
+                    <p>Try each of the following:</p>
+                    <ul>
+                        <li>Make your browser window narrow (less than 600px).</li>
+                        <li>Make the text Very Large in Chrome preferences.</li>
+                        <li>View the page on small devices in the device simulator.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content-panel blue">
+                <div class="content-narrow align-centre decorative">
+                    <p class="icon">
+                        <i class="fas fa-bicycle"></i>
+                    </p>
+                    <p class="icon">
+                        <i class="fas fa-bicycle"></i>
+                    </p>
+                    <p class="icon">
+                        <i class="fas fa-bicycle"></i>
+                    </p>
+                </div>
+                <div class="content-wide">
+                    <p>Mollis nunc sed id semper risus in hendrerit gravida. Nibh nisl condimentum id venenatis a condimentum vitae sapien. Vestibulum lorem sed risus ultricies tristique. Eu feugiat pretium nibh ipsum consequat nisl vel pretium. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Volutpat odio facilisis mauris sit. A diam maecenas sed enim. Risus viverra adipiscing at in tellus. Malesuada fames ac turpis egestas integer eget. Quis varius quam quisque id diam. Mi quis hendrerit dolor magna eget est lorem ipsum dolor. Nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Aliquam sem et tortor consequat id porta nibh venenatis cras. Nisl nunc mi ipsum faucibus.</p>
+                </div>
+            </div>
+            <div class="content-panel">
+                <div class="content-medium">
+                    <h2>Lorem Ipsum</h2>
+                </div>
+                <div class="content-wide content-border">
+                    <p>Mollis nunc sed id semper risus in hendrerit gravida. Nibh nisl condimentum id venenatis a condimentum vitae sapien. Vestibulum lorem sed risus ultricies tristique. Eu feugiat pretium nibh ipsum consequat nisl vel pretium. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Volutpat odio facilisis mauris sit. A diam maecenas sed enim. Risus viverra adipiscing at in tellus. Malesuada fames ac turpis egestas integer eget. Quis varius quam quisque id diam. Mi quis hendrerit dolor magna eget est lorem ipsum dolor. Nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Aliquam sem et tortor consequat id porta nibh venenatis cras. Nisl nunc mi ipsum faucibus.</p>
+                </div>
+            </div>
+            <div class="content-panel blue">
+                <div class="content-wide">
+                    <p>Mollis nunc sed id semper risus in hendrerit gravida. Nibh nisl condimentum id venenatis a condimentum vitae sapien. Vestibulum lorem sed risus ultricies tristique. Eu feugiat pretium nibh ipsum consequat nisl vel pretium. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Volutpat odio facilisis mauris sit. A diam maecenas sed enim. Risus viverra adipiscing at in tellus. Malesuada fames ac turpis egestas integer eget. Quis varius quam quisque id diam. Mi quis hendrerit dolor magna eget est lorem ipsum dolor. Nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Aliquam sem et tortor consequat id porta nibh venenatis cras. Nisl nunc mi ipsum faucibus.</p>
+                </div>
+                <div class="content-medium align-centre">
+                    <button><span class="body-text">Learn more</span> <i class="fas fa-caret-right"></i></button>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>Header image: <a href="https://commons.wikimedia.org/w/index.php?curid=7300934">Jeffery Hayes, CC BY-SA 3.0</a></p>
+        </footer>
+    </body>
+</html>
