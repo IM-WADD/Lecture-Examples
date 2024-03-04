@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    height: 300px;
+}
+
+#sq2, #sq5, #sq8 {
+    align-self: center;
+}
+
+#sq4, #sq7 {
+    margin-left: -200px; 
+}
+
+#sq3, #sq6, #sq9 {
+    align-self: flex-end
+}
