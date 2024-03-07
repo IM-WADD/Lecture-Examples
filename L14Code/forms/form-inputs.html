@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Form Inputs</title>
+        <style>
+            form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            div {
+                padding-bottom:1em;
+                margin-bottom: 1em;
+                border-bottom: dashed lightblue
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Selected Form Input Controls</h1>
+        <form>
+            <!-- ALL form elements (except hidden, button, and submit) must have a label for accessibility-->
+            <div>
+                <!-- An EXPLICIT LABEL. Recommended. The for attribute on the label matches the input's id attribute. -->
+                <label for="btn">Regular button (not submit):</label>
+                <input id="btn" name="btn" type="button" value="Click me!">
+            </div>
+            <div>
+                <!-- An IMPLICIT label. Not recommended. The input is nested inside its label. -->
+                <label>Checkbox:
+                    <input name="check" type="checkbox">
+                </label>
+            </div>
+            <div>
+                <label for="selected-check">Already checked checkbox:</label>
+                <input id="selected-check" name="check2" type="checkbox" checked>
+            </div>
+            <div>
+                <label for="colour-picker">Pick a colour:</label>
+                <input id="colour-picker" name="colour-picker" type="color" required>
+            </div>
+            <div>
+                <label for="date-picker">What is the date?</label>
+                <input id="date-picker" name="today" type="date">
+            </div>
+            <div>
+                <label for="date-time-picker">What is the date AND time?</label>
+                <input id="date-time-picker" name="now" type="datetime-local">
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <p><small>Try typing something that doesn't look like an email address, then press Enter/Return e.g. no @</small></p>
+                <input id="email" name="email" type="email" placeholder="user@example.com" required>
+            </div>
+            <div>
+                <label for="file-select">Choose a file:</label>
+                <input id="file-select" name="file" type="file" >
+            </div>
+            <div>
+                <label for="how-much">How many (between 1 and 10)?</label>
+                <input type="number" name="quantity" id="how-much" min="0" max="10">
+                <p><small>The min/max attributes provide <em>some</em> constraints on input</small></p>
+            </div>
+            <div>
+                <label for="pwd">Password:</label>
+                <input type="password" id="pwd" name="pwd">
+            </div>
+            <div>
+                <label for="radio">This is a single radio button, which doesn't make sense</label>
+                <input id="radio" name="only-choice" type="radio">
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Cats or dogs?</legend>
+                    <label for="cats">Cats</label>
+                    <input id="cats" name="cats-v-dogs" type="radio" value="cat">
+                    <label for="dogs">Dogs</label>
+                    <input id="dogs" name="cats-v-dogs" type="radio" value="dog">
+                </fieldset>
+            </div>
+            <div>
+                <label for="range">Choose a number between 1 and 10:</label>
+                <input id="range" name="range" type="range" min="1" max="10" value="7.5">
+            </div>
+            <div>
+                <label for="clear-all">Click this button and see what happens...</label>
+                <input id="clear-all" type="reset" value="Click me after entering values in other fields">
+            </div>
+            <div>
+                <label for="username">Username:</label>
+                <input id="username" type="text" name="user" placeholder="username">
+            </div>
+            <div>
+                <input id="submit" type="submit" value="Submit">
+                <p>Submit buttons will send the form fields to the server (assuming the form has an action attribute)</p>
+            </div>
+        </form>
+        <script src="formActions.js"></script>
+    </body>
+</html>
