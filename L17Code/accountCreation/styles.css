@@ -1,0 +1,64 @@
+:root {
+    /** CSS variables for text colours **/
+    --standard: #212738;
+    --heading: #42033D;
+    --highlight: #7C72A0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 2em;
+    color: var(--standard);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+}
+
+h1, h2, h3 {
+    color: var(--heading);
+}
+
+.info {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: var(--highlight);
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    font-size: inherit;
+    font-family: inherit;
+    color: var(--highlight);
+    border: solid 2px var(--highlight);
+    border-radius: 1em;
+    padding: 1em;
+}
+
+input[type=text]:focus, button:focus {
+    outline: solid 2px var(--highlight);
+}
+
+.button-row {
+    margin-top: 1em;
+    display:flex;
+    justify-content: flex-end;
+}
+
+button {
+    background-color: var(--heading);
+    border-radius: 1em;
+    padding: 1em;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    width: auto;
+}
+
+button:hover {
+    background-color: var(--highlight);
+}

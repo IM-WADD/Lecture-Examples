@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 2em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #BEE3DB;
+    color: #555B6E;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+}
+
+textarea {
+    font-size: inherit;
+    font-family: inherit;
+    background-color: #FAF9F988;
+    color: #555B6E;
+    border: none;
+    border-radius: 1em;
+    outline: none;
+    padding: 1em;
+}
