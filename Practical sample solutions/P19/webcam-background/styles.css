@@ -1,0 +1,25 @@
+canvas {
+    background-image: url('images/business-people-pointing-1557758791FVV.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: solid 1px;
+}
+
+#webcam {
+    position: absolute;
+    left: -100vw;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#controls {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}

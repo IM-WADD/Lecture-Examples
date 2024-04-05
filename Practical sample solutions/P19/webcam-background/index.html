@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Webcam Background</title>
+        <link href="styles.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <video id="webcam"></video>
+        <div id="container">
+            <canvas id="canvas" width="800px" height="533px"></canvas>
+            <div id="controls">
+                <button id="video-toggle">Webcam <span id="status">ON</span></button>
+                <button id="background-toggle">Background image <span id="bg-status">ON</span></button>
+                <div>
+                    <label for="change-image">Change background image: </label>
+                    <input type="file" id="change-image" accept="image/png, image/jpeg, image/gif, image/jpg">
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@mediapipe/selfie_segmentation"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-segmentation@1.0.1"> </script>
+        <script src="main.js"></script>
+    </body>
+</html>
