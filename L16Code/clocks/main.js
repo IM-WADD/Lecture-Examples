@@ -92,6 +92,7 @@ document.getElementById("submit").addEventListener("click", function() {
 
 // Check if the user has any places stored. If not, prompt them to add at least one.
 if (localStorage.getItem("places") !== null) {
+    // The data stored in localStorate is a JSON object. Call JSON.parse() to convert it to a JavaScript object
     const places = JSON.parse(localStorage.getItem("places"));
     // Add a clock face and set the start time for each place
     for (let place of Object.keys(places)) {
