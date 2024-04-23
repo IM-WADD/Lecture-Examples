@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 2em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #320E3B;
+    color: #DDFBD2;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+input[type=file] {
+    font-size: inherit;
+    font-family: inherit;
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    outline: none;
+    padding: 1em;
+}
+
+input::file-selector-button {
+    font-size: inherit;
+    font-family: inherit;
+    background-color: #6B7FD7;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    margin-right: 0.6em;
+}
+
+input::file-selector-button:hover {
+    background-color: #BCEDF6;
+    color: #4C2A85;
+    cursor: pointer;
+}
