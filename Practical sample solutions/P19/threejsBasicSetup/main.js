@@ -1,7 +1,6 @@
 /**
- * This example draws on the ThreeJS documentation and the source code for 
- * this ThreeJS powered GLTF model viewer: https://gltf-viewer.donmccurdy.com/
- * Viewer source code: https://github.com/donmccurdy/three-gltf-viewer/blob/main/src/viewer.js
+ * This example contains the completed code from the Creating a Scene page
+ * in the ThreeJS docs: https://threejs.org/docs/#manual/en/introduction/Creating-a-scene
  */
 
 // Import the core ThreeJS library
@@ -11,6 +10,7 @@ import * as THREE from "three";
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 const renderer = new THREE.WebGLRenderer();
+
 
 // Set the size of the ThreeJS player to match the browser window
 renderer.setSize( window.innerWidth, window.innerHeight );
