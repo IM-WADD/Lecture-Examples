@@ -1,0 +1,62 @@
+/* I am a CSS comment. Notice I am different from an HTML comment */
+body {
+    margin-left:5vw;
+    margin-right:5vw;
+    padding:0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: rgb(161, 31, 31);
+}
+
+/** Styling for the navigation menu **/
+nav li {
+    display: inline-block; /* puts the list items inline in a row (also try inline) */
+    background-color: black;
+    /* fixed units are used because I don't really want the padding or border radius to change if the screen size changes */
+    padding: 12px; /* adds spacing between the content and the edge of each item */
+    border-radius: 6px; /* makes the corners rounded */
+    color: white; /* this will be overriden by default styling for the child a elements */
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+}
+
+/* Not ideal as it gives the impression that the list item area is "clickable" but only the link
+is clickable in reality. We'll fix this in coming weeks! */
+nav li:hover {
+    background-color: rgb(74, 116, 231);
+    cursor: pointer;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+}
+/** End nav styling **/
+
+.title {
+    font-size: 48px;
+    margin-bottom: 0;
+}
+
+.subtitle {
+    margin-top:0;
+}
+
+#rainier {
+    width: 30vw;
+    max-width: 600px;
+    min-width: 200px;
+    float: right;
+    margin-left:12px;
+    margin-bottom: 12px;
+}
