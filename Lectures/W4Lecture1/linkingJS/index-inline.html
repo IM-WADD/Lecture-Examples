@@ -3,8 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Practical 13 - Stage 1 and 2</title>
+        <title>Different Ways to Link JS</title>
         <link href="styles.css" type="text/css" rel="stylesheet">
+        <script>
+            /* 
+            External scripts are generally preferred over internal scripts like this one because 
+            they provide better separation of concerns. Additionally, external scripts may load 
+            faster because they can be cached by the browser.
+
+            This variable is used by an inline script in the body.
+            */
+            let numSquares = 10;
+        </script>
     </head>
     <body>
         <div class="grid-container">
@@ -25,11 +35,12 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus, erat non commodo accumsan, erat eros ultrices ligula, non consectetur orci est et massa. Ut dignissim semper augue. Integer enim lectus, accumsan at posuere vitae, consequat eget mauris. Fusce lorem nisi, vulputate eget velit eu, porttitor consequat ante. Curabitur odio tellus, porttitor a pharetra fermentum, hendrerit vitae metus. Praesent in leo odio. Fusce nec magna diam. Mauris vel mauris in neque pellentesque mattis sit amet ac lectus. Cras non vehicula metus, ut tincidunt est. Aliquam orci leo, euismod vitae risus efficitur, rhoncus sagittis lectus. In finibus viverra sem a ultricies. In hac habitasse platea dictumst. Nam lacinia consectetur dui porttitor ornare. Fusce metus dolor, luctus tempus fermentum sed, venenatis sagittis nibh. </p>
                 <p>The squares below were aligned using flexbox</p>
                 <div id="more-content" class="more">
-                    <div class="more-item"></div>
-                    <div class="more-item"></div>
-                    <div class="more-item"></div>
-                    <div class="more-item"></div>
-                    <div class="more-item"></div>
+                   <script>
+                        // CAUTION: Dynamically generated HTML will not be picked up by search engines.
+                        for (let i = 0; i < numSquares; i++) {
+                            document.getElementById("more-content").innerHTML += '<div class="more-item"></div>';
+                        }
+                    </script>
                 </div>
             </main>
             <aside>
@@ -40,6 +51,5 @@
                 <p class="small">This text was aligned using flexbox</p>
             </footer>
         </div>
-        <script src="main.js"></script>
     </body>
 </html>
