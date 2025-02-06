@@ -1,0 +1,23 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3em;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container > div {
+    text-align: center;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0.6em;
+    border-radius: 12px;
+}
