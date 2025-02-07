@@ -1,0 +1,43 @@
+body {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.container {
+    display:flex;
+}
+
+.stretchy {
+    width: 50px;
+    height: 50px;
+    background-color: #ff7b23;
+    border: 2px solid black;
+    margin-right: 6px;
+    transition: width 2s ease;
+}
+
+.stretchy:nth-child(even) {
+    background-color: #fff41d;
+}
+
+.stretchy:hover {
+    width: 100px;
+    background-color: #0fcfff;
+}
+
+button {
+    width: 100px;
+    padding: 1em;
+}
+
+#button-holder {
+    height: 0px;
+    overflow: hidden;
+    transition: height 1s;
+}
+
+#button-holder.open {
+    height: 427px;
+}

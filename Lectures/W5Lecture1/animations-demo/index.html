@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/e2ea650ddc.js" crossorigin="anonymous"></script>
+        <title>Animations Demo</title>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                color: #333;
+                font-size:14px;
+                padding:24px;
+            }
+
+            .anim-bg {
+                background-color: #EEE;
+                padding: 12px;
+                border-radius: 6px;
+            }
+
+            /** 1. SPINNER **/
+            .spinner {
+                font-size: 3em;
+                color:#00C2C7;
+                animation: spin 2s infinite linear;
+                margin:auto 50%;
+            }
+
+            @keyframes spin {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            /** 2. GRADIENT EFFECT **/
+            .gradient-demo {
+                width: 50%;
+                height: 40px;
+                margin:auto 25%;
+                background-color:#00C2C7;
+            }
+
+            .gradient-demo:hover {
+                cursor: pointer;
+                animation: moving-gradient 0.5s linear;
+            }
+
+            @keyframes moving-gradient {
+                0% {
+                    background-image:linear-gradient(to right, #FFF, #00C2C7, #00C2C7, #00C2C7, #00C2C7, #00C2C7);
+                }
+                20% {
+                    background-image:linear-gradient(to right, #00C2C7, #FFF, #00C2C7, #00C2C7, #00C2C7, #00C2C7);
+                }
+                40% {
+                    background-image:linear-gradient(to right, #00C2C7, #00C2C7, #FFF, #00C2C7, #00C2C7, #00C2C7);
+                }
+                60% {
+                    background-image:linear-gradient(to right, #00C2C7, #00C2C7, #00C2C7, #FFF, #00C2C7, #00C2C7);
+                }
+                80% {
+                    background-image:linear-gradient(to right, #00C2C7, #00C2C7, #00C2C7, #00C2C7, #FFF, #00C2C7);
+                }
+                100% {
+                    background-image:linear-gradient(to right, #00C2C7, #00C2C7, #00C2C7, #00C2C7, #00C2C7, #FFF);
+                }
+            }
+
+            /** 3. PROGRESS BAR **/
+            .bar-container {
+                width: 80%;
+                height: 40px;
+                margin: 40px 10%;
+                box-sizing: border-box;
+                border: 1px solid #CCC;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow:inset 0 0 10px #CCC;
+            }
+
+            .bar-background {
+                height:100%;
+                background-color:#00C2C7;
+                box-shadow:inset 0 0 16px rgb(0, 100, 104);
+                width: "100%";
+                animation: progress 10s linear infinite;
+            }
+
+            @keyframes progress {
+                from {
+                    width: 0%;
+                }
+                to {
+                    width: 100%;
+                }
+            }
+
+
+
+            /** MOCK PAGE **/
+            .page-holder {
+                border: solid 1px #333;
+                width: 80%;
+                margin: 40px 10%;
+                padding:20px;
+                font-size:1.2em;
+                line-height: 2em;
+                box-sizing: border-box;
+                overflow: hidden;
+                position:relative;
+            }
+
+            /** 4. HAMBURGER MENU **/
+            .page-content {
+                margin-left: 32px;
+            }
+
+            .menu {
+                width:200px;
+                height: 100%;
+                color: #FFF;
+                background-color: #000;
+                position: absolute;
+                font-variant: small-caps;
+                top:0;
+                left:0;
+                bottom:0;
+                padding:12px;
+                animation: open-menu 2s ease-in infinite alternate;
+            }
+
+            .menu h3 {
+                margin-top: 0;
+            }
+
+            .menu .btn {
+                float:right;
+                cursor: pointer;
+                background: none;
+                color: #FFF;
+                font-size: 1.2em;
+                border:none;
+                padding:0;
+                margin:0;
+            }
+
+            .menu-content {
+                max-width: 156px;
+            }
+
+            .menu-content a {
+                text-decoration: none;
+                color: #FFF;
+            }
+
+            .menu-content a:hover {
+                text-decoration: underline;
+                color: #FFF;
+            }
+
+            @keyframes open-menu {
+                0% {
+                    left:-180px; 
+                }
+
+                25% {
+                    left:-180px
+                }
+
+                50% {
+                    left: 0px;
+                }
+                100% {
+                    left: 0px;
+                }
+            }
+
+            
+
+            /** REDUCED MOTION **/
+            @media (prefers-reduced-motion: reduce) {
+                .spinner, .gradient-demo:hover  {
+                    animation: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS Animation Demo</h1>
+        <p>Turn on "reduce motion" in your OS settings to see the effect of the 
+            reduce-motion media query.</p>
+        <h2>1. Spinner</h2>
+        <div class="anim-bg">
+            <i class="fa-solid fa-circle-notch spinner"></i>
+        </div>
+        <h2>2. Gradient animation on hover</h2>
+        <div class="gradient-demo"></div>
+        <h2>3. Progress bar</h2>
+        <p><em>Note: A real progress bar should fill in line with a real slow process... This requires JS as well as CSS.</em></p>
+        <div class="bar-container">
+            <div class="bar-background"></div>
+        </div>
+        <h2>4. Hamburger menu</h2>
+        <p><em>Note: In reality, the menu should open / close in response to user interaction, which requires JS.</em></p>
+        <div class="page-holder">
+            <div class="page-content">
+                <h2>Lorem Ipsum</h2>
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Quis vel eros donec ac
+                odio tempor. Eget gravida cum sociis natoque penatibus et magnis dis.
+                Magna etiam tempor orci eu. Nulla at volutpat diam ut venenatis tellus in.
+                Ullamcorper a lacus vestibulum sed arcu non. Et netus et malesuada fames
+                ac turpis. Et tortor consequat id porta nibh venenatis cras sed. Id
+                faucibus nisl tincidunt eget nullam non nisi est sit. Pharetra magna ac
+                placerat vestibulum lectus mauris ultrices. Gravida neque convallis a cras
+                semper auctor neque. Risus commodo viverra maecenas accumsan lacus vel
+                facilisis volutpat est. Nunc sed velit dignissim sodales. Enim eu turpis
+                egestas pretium aenean pharetra magna ac placerat. Nisl purus in mollis
+                nunc sed id semper. Nibh praesent tristique magna sit amet purus gravida
+                quis blandit. Nibh sed pulvinar proin gravida hendrerit lectus a. Enim nec
+                dui nunc mattis enim ut tellus elementum sagittis.
+                </p>
+            </div>
+            <div class="menu">
+                <h3>Menu
+                <button class="btn" type="button" onClick="console.log('button clicked!')">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                </h3>
+                <div class="menu-content">
+                    <p>
+                        <a href="#menu1">Menu option 1</a>
+                    </p>
+                    <p>
+                        <a href="#menu2">Menu option 2</a>
+                    </p>
+                    <p>
+                        <a href="#menu3">Menu option 3</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
