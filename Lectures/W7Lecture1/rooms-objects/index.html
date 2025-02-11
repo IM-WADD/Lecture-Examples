@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles.css" type="text/css" rel="stylesheet">
+        <title>Rooms</title>
+    </head>
+    <body>
+        <h1>Rooms</h1>
+        <section>
+            <h2>All Rooms</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Building</th>
+                        <th>Room Number</th>
+                        <th>Usage Type</th>
+                    </tr>
+                </thead>
+                <tbody id="rooms">
+                    <!-- Stored rooms will be displayed here -->
+                </tbody>
+            </table>
+        </section>
+        <h2>Add a New Room</h2>
+        <form>
+            <div>
+                <label for="building">Building name:</label>
+                <input id="building" name="building" type="text" required>
+            </div>
+            <div>
+                <label for="number">Room number:</label>
+                <input id="number" name="number" type="text" required>
+            </div>
+            <div>
+                <label for="type">Room type:</label>
+                <select id="type" name="type">
+                    <option value="office">Office</option>
+                    <option value="classroom">Classroom</option>
+                </select>
+            </div>
+            <div id="office-details">
+                <label for="occupants">If the office has occupants, please list their names separated by commas:</label>
+                <textarea id="occupants" name="occupants"></textarea>
+            </div>
+            <div id="classroom-details">
+                <div>
+                    <label for="numSeats">Number of seats:</label>
+                    <input type="number" id="numSeats">
+                </div>
+                <div>
+                    <label for="projector">The room has a projector:</label>
+                    <input id="projector" type="checkbox">
+                </div>
+            </div>
+            <input id="add" type="submit" value="Add Room">
+        </form>
+        <script src="main.js"></script>
+    </body>
+</html>
