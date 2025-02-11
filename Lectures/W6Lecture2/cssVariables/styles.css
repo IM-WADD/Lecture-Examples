@@ -1,0 +1,69 @@
+:root {
+    --primary-background: #FDE8E9;
+    --primary-foreground: #1F2232;
+    --accent-background1: #E3BAC6;
+    --accent-background2: #BC9EC1;
+    --accent-foreground: #596475;
+    --body-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --header-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/** 
+Dark mode colour scheme (when user has set Dark Mode as their preference in their operating system 
+Always check colour contrast in every mode!
+**/
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-background: #1F2232;
+        --primary-foreground: #FDE8E9;
+        --accent-background1: #596475;
+        --accent-foreground: #E3BAC6;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+    min-height: 100vh;
+    width: 100vw;
+    font-family: var(--body-font-family);
+    background-color: var(--primary-background);
+    color: var(--primary-foreground);
+}
+
+main {
+    margin: 10vw;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--header-font-family);
+    color: var(--accent-foreground);
+}
+
+.intro p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+
+.columns {
+    display: flex;
+    gap: 2em;
+}
+
+aside {
+    min-width: 20vw;
+    background-color: var(--accent-background1);
+    padding: 2em;
+}
+
+footer {
+    width: 100vw;
+    text-align: center;
+    background-color: var(--accent-background2);
+    padding: 1em;
+}
