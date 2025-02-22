@@ -1,0 +1,65 @@
+/**
+The style block below uses CSS variables, which make it easier to create themes.
+Read about CSS variables here:
+https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+
+**/
+
+:root {
+    /** These variables will be used in all relevant style blocks.
+    Light mode variables will be used by default but can be changed 
+    with JavaScript.
+    **/
+    --bg: #EDF2EF;
+    --header-colour: #212738;
+    --text-colour: #212738;
+    --highlight-colour: #F97068;
+}
+
+*,
+*::before,
+*::after {
+    /** Set the box-sizing of all elements to border-box **/
+    box-sizing: border-box;
+}
+
+body {
+    /** Remove margin / padding from most elements (leaves some, like 
+    lists, alone). **/
+    margin: 0;
+    padding: 6em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    /** Use the variables defined in :root **/
+    background-color: var(--bg);
+    color: var(--text-colour);
+
+}
+
+h1 {
+    color: var(--header-colour);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+footer > button {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    font-size: 0.8em;
+    color: var(--text-colour);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+footer > button:hover, footer > button:focus {
+    color: var(--highlight-colour);
+}
