@@ -4,7 +4,6 @@ These styles are applied in addition to the styles in main.css
 Changes for devices <= 600px wide
 - The header is shrunk to take up much less vertical space
 - For the inline-block approach to layout, the navigation items are changed from inline-block to block
-- For the flexbox approach to layout, the flex direction is changed from row to column
 - The menu bar is no longer fixed (so it doesn't block a big chunk of screen space)
 - Decorative elements are not displayed
 - Remaining columns are full width and stacked
@@ -29,14 +28,9 @@ Changes for devices <= 600px wide
         position: relative;
     }
     
-    /* navigation - inline block approach only */
+    /* navigation */
     .menu li {
         display: block;
-    }
-
-    /* navigation - flexbox approach only */
-    .flex-menu ul {
-        flex-direction: column;
     }
 
     /* Footer Section */
@@ -50,17 +44,8 @@ Changes for devices <= 600px wide
     }
 
     /* A row of page content */
-    .content-panel, .flex-panel {
+    .content-panel {
         min-height: auto;
-    }
-
-    .flex-panel {
-        flex-direction: column;
-    }
-
-    .flex-panel > div {
-        padding: 20px;
-        flex-basis: auto;
     }
 
     .content-panel > div {
