@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Activity Suggester</title>
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link href="styles.css" type="text/css" rel="stylesheet">
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/e2ea650ddc.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="loading">
+            <div class="spinner-border spinner-border-xl text-info" role="status"></div>
+            <p>Searching... please hold</p>
+        </div>
+        <div id="data" class="container">
+            <p class="display-1 text-info" id="activity-text"></p>
+            <div class="info">
+                <span class="cat badge rounded-pill bg-dark" id="activity-type"></span>
+                <div id="num-participants"></div>
+                <p class="sr-only" id="participants-sr"></p>
+                <p id="activity-price"></p>
+            </div>
+            <div class="d-grid gap-2">
+                <button id="button" class="btn btn-dark mt-4">
+                  Find me something else to do
+                </button>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
