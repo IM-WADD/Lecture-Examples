@@ -1,6 +1,9 @@
 const main = document.getElementsByTagName("main")[0];
 const advice = document.getElementById("advice");
 
+/**
+ * Get a new piece of advice from the AdviceSlip API.
+ */
 function getRandomAdvice() {
     main.style.top = 0;
 
@@ -22,6 +25,10 @@ function getRandomAdvice() {
     
 }
 
+/**
+ * Display a message on the page
+ * @param {string} adviceText 
+ */
 function display(adviceText) {
     const message = adviceText;
     advice.innerText = message;

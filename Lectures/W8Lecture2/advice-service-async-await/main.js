@@ -1,6 +1,9 @@
 const main = document.getElementsByTagName("main")[0];
 const advice = document.getElementById("advice");
 
+/**
+ * Get a new piece of advice from the AdviceSlip API.
+ */
 async function getRandomAdvice() {
     main.style.top = 0;
 
@@ -16,6 +19,7 @@ async function getRandomAdvice() {
     advice.innerText = message;
     main.style.top = `-100vh`;
 }
+
 
 getRandomAdvice();
 
