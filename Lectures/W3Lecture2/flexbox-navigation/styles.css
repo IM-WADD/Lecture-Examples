@@ -1,0 +1,9 @@
+body {
+    background-color: #cccccc;
+}
+
+nav li {
+    background-color: #000000;
+    border: rgb(255, 102, 42) solid 3px;
+    color: #ffffff;
+}
