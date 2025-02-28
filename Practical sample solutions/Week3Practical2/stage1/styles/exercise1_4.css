@@ -1,0 +1,26 @@
+main {
+    display:flex;
+    justify-content: center;
+}
+
+.container {
+    width:300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#sq6 {
+    order:1;
+}
+
+#sq5 {
+    order:2;
+}
+
+#sq4 {
+    order:3;
+}
+
+#sq7, #sq8, #sq9 {
+    order:4;
+}
