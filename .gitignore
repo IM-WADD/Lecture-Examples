@@ -5,6 +5,7 @@ Lectures/W3Lecture2/flexbox-navigation-complete
 Lectures/W4Lecture2/counter/countersREF.js
 Lectures/W8Lecture1/spaceGameBROKEN
 Lectures/W8Lecture1/spaceGameFIXED
+Lectures/W9Lecture1/vite-website-complete
 # Practical sample solutions/Week2Practical1
 # Practical sample solutions/Week2Practical2
 # Practical sample solutions/Week3Practical1
@@ -19,3 +20,28 @@ Practical sample solutions/Week8Practical1
 Practical sample solutions/Week8Practical2
 
 # Practical sample solutions/P19/models/brick_building.glb
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
