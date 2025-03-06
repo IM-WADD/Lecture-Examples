@@ -16,6 +16,10 @@ const segmenterConfig = {
   modelType: 'general'
 }
 
+
+/**
+ * Start the segmentation model
+ */
 function setup() {
     bodySegmentation.createSegmenter(model, segmenterConfig)
         .then(function (segmenter) {
@@ -24,6 +28,11 @@ function setup() {
     
 }
 
+
+/**
+ * Perform segmentation
+ * @param {*} segmenter The segmenter from TensorflowJS
+ */
 function segment(segmenter) {
     if (backgroundOn) {
         segmenter.segmentPeople(video)
@@ -48,11 +57,25 @@ function segment(segmenter) {
     }
 }
 
+
+/**
+ * Checks if r, g, b, a values equate to green
+ * @param {number} r 
+ * @param {number} g 
+ * @param {number} b 
+ * @param {number} a 
+ * @returns {boolean} True if the inputs are green
+ */
 function isPixelGreen (r, g, b, a) {
     return r === 0 && g === 255 && b === 0 && a === 255;
 }
 
 
+/**
+ * Remove the background from the provided image
+ * @param {Image} image An image to segment
+ * @param {*} maskData The masked image pixel data
+ */
 function drawImageWithoutBackground(image, maskData) {
     ctx.drawImage(image, 0, 0);
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
@@ -66,6 +89,8 @@ function drawImageWithoutBackground(image, maskData) {
     ctx.putImageData(imageData, 0, 0);
 }
 
+
+/** Video Controls */
 video.addEventListener("play", function () {
     videoIsPlaying = true;
     videoStatusText.innerText = "ON";
@@ -100,6 +125,7 @@ backgroundToggle.addEventListener("click", function () {
     }
 })
 
+// Event listener for the change image button
 document.getElementById("change-image").addEventListener("change", function (event) {
     if (event.target.files[0]) {
         const reader  = new FileReader();
@@ -110,6 +136,7 @@ document.getElementById("change-image").addEventListener("change", function (eve
     }
 })
 
+// Start the webcam
 navigator.mediaDevices
     .getUserMedia({
         audio: false,
