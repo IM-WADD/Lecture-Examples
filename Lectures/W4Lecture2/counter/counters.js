@@ -5,7 +5,7 @@ let count2 = 0;
 
 
 function addClick(event) {
-    console.log(event.target.id, "button clicked at", event.timestamp);
+    console.log(event.target.id, "button clicked at", event.timeStamp);
     if (event.target.id === "btn1") {
         count1++;
         document.getElementById("count1").innerText = count1;
