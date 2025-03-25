@@ -159,6 +159,8 @@ document.getElementById("add").addEventListener("click", function (event) {
         const numSeats = document.getElementById("numSeats").value;
         const hasProjector = document.getElementById("projector").checked;
         newRoom = new Classroom(building, number, numSeats, hasProjector);
+    } else {
+        newRoom = new Room(building, number);
     }
     rooms.push(newRoom);
     tableBody.appendChild(createRow(newRoom));
