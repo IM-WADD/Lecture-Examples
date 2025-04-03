@@ -5,9 +5,9 @@ function operation1() {
 function operation2Broken() {
     console.log("operation 2 broken start")
     const output = document.getElementById("output");
-    const response = fetch(`${API_BASE}${API_ENDPOINT}`);
-    const src = response.text(); // Some APIs respond with plain text rather than JSON
-    output.innerHTML = `<img src="${API_BASE}${src}" alt="A random dog"/>`;
+    const response = fetch("https://random.dog/woof.json");
+    const url = response.json(); 
+    output.innerHTML = `<img src="${url.url}" alt="A random dog"/>`;
     console.log("operation 2 broken complete");
 }
 
