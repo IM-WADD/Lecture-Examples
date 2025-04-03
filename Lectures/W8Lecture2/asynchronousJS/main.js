@@ -5,9 +5,9 @@ function operation1() {
 function operation2Broken() {
     console.log("operation 2 broken start")
     const output = document.getElementById("output");
-    const response = fetch("http://shibe.online/api/shibes?count=1");
-    const urls = response.json();
-    output.innerHTML = `<img src="${urls[0]}" alt="A random Shiba Inu"/>`;
+    const response = fetch(`${API_BASE}${API_ENDPOINT}`);
+    const src = response.text(); // Some APIs respond with plain text rather than JSON
+    output.innerHTML = `<img src="${API_BASE}${src}" alt="A random dog"/>`;
     console.log("operation 2 broken complete");
 }
 
@@ -20,9 +20,9 @@ async function operation2() {
     console.log("operation 2 start");
     const output = document.getElementById("output");
     try {
-        const response = await fetch("http://shibe.online/api/shibes?count=1");
-        const urls = await response.json();
-        output.innerHTML = `<img src="${urls[0]}" alt="A random Shiba Inu"/>`;
+        const response = await fetch("https://random.dog/woof.json");
+        const url = await response.json(); 
+        output.innerHTML = `<img src="${url.url}" alt="A random dog"/>`;
         console.log("operation 2 complete");
     }
     catch (error) {
@@ -38,16 +38,16 @@ async function operation2() {
 function operation2Alternative() {
     console.log("operation 2 alternative start");
     // fetch() is asyncronous
-    fetch("http://shibe.online/api/shibes?count=1")
+    fetch("https://random.dog/woof.json")
         .then(function (response) {
             // response is the value returned by fetch()
             // .json() is also asynchronous
             return response.json();
         })
-        .then(function (urls) {
+        .then(function (url) {
             // urls is the value returned by the previous then()
             const output = document.getElementById("output");
-            output.innerHTML = `<img src="${urls[0]}" alt="A random Shiba Inu"/>`;
+            output.innerHTML = `<img src="${url.url}" alt="A random dog"/>`;
             console.log("operation 2 alternative complete");
         })
         .catch(function (error) {
