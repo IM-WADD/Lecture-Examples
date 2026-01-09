@@ -9,6 +9,7 @@ const ctx = canvas.getContext("2d");
  * @param {CanvasRenderingContext2D} context The 2D canvas context[[]]
  */
 function drawPerson(x, y, context) {
+    // head
     context.beginPath();
     context.arc(x, y, 20, 0, 2 * Math.PI);
     context.fill(); // Will fill any shapes drawn so far, or since the last beginPath()
