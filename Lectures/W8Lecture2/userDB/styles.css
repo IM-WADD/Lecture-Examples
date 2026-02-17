@@ -1,19 +1,27 @@
 body {
-    font-size: 20px;
+    padding: 5vh 10%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2b2b2b;
 }
 
 .user {
     display:grid;
     grid-template-columns: 100px 20% 20%;
-    margin-bottom: 1em;
+    gap: 1em;
+    padding: 1em;
+    margin-bottom: 2em;
+    background-color: #7ec6f6;
+    border: solid 1px #5c199b;
+    box-shadow: 8px 8px #5c199b;
 }
 
 .user img {
     border-radius: 50%;
-    border: solid 2px #000;
-    margin-right: 1em;
-    margin-top: 50%;
-    margin-bottom: auto;
+    border: dotted 2px #2b2b2b;
+}
+
+.user h2 {
+    margin-top:0;
 }
 
 .actions {
@@ -22,4 +30,19 @@ body {
     justify-content: center;
     flex-direction: column;
     gap:1em;
+}
+
+button {
+    padding: 0.5em 1em;
+    border: none;
+    background-color: #2b2b2b;
+    color: #f0ffff;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #5c199b;
 }
