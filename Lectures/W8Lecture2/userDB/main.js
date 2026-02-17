@@ -131,8 +131,13 @@ function showPosts(username, posts) {
         postArticle.appendChild(content);
         postArea.appendChild(postArticle);
     }
-}
 
+    window.scrollTo({
+            top: postArea.offsetTop,
+            left: 0,
+            behavior: 'smooth'
+        });
+}
 /**
  * FOR TESTING ONLY
  * Demonstrates use of a POST request to add a user to the database.
@@ -170,7 +175,7 @@ async function updateUser(username) {
     const currentCountText = document.getElementById(`${username}-count`);
     const textParts = currentCountText.innerText.split(" ");
     const newValue = parseInt(textParts[1]) + 1;
-    const apiURL = `${API}?table=Friends`;
+    const apiURL = `${API}?table=${tables.profiles}`;
     // Step 1 - request data from the API
     const rawResponse = await fetch(apiURL, {
         method: 'POST',
