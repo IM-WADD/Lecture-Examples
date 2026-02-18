@@ -209,7 +209,7 @@ async function updateUser(username) {
  * @param {String} username The username of the user to be deleted.
  */
 async function deleteUser(username) {
-   const apiURL = `${API}?table=Friends`;
+   const apiURL = `${API}?table=${tables.profiles}`;
     // Step 1 - request data from the API
     const rawResponse = await fetch(apiURL, {
         method: 'POST',
@@ -236,4 +236,4 @@ async function deleteUser(username) {
 
 const users = await getAllUsers();
 displayAllUsers(users);
-//addUser();
+// addUser();
