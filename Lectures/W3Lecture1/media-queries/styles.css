@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: black;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #00C2DE;
+    color: black;
+}
+
+.content-panel {
+    margin:0;
+    padding: 2rem 10vw;
+    min-height: 80vh;
+}
+
+header .content-panel {
+    background-image: url("images/Web Landing page hero-UoY_Campus East - Ron Cooke Hub_April 2012 - Alex Holland-1.jpg");
+    background-size: cover;
+    padding-top: 0;
+    font-size: 2rem;
+}
+
+header h1 {
+    margin: 30% 0;
+    display: inline-block;
+    font-size: 4rem;
+    background-color: #FFD200;
+    position: relative;
+    left: -10vw;
+    padding: 2rem 2rem 2rem 10vw;
+    border-radius: 0 12px 12px 0px;
+}
+
+.align-left img, .align-right img {
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    max-width: 60%;
+}
+
+.align-right {
+    background-color: #A3ADB4;
+}
+
+.align-right img {
+    float:right;
+    margin-left: 2rem;
+}
+
+.align-left img {
+    float:left;
+    margin-right: 2rem;
+}
+
