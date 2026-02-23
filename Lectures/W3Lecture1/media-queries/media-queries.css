@@ -1,0 +1,26 @@
+@media (max-width: 768px) {
+    .content-panel {
+        min-height: auto;
+    }
+
+    .align-left img, .align-right img {
+        float: none;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-panel {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .align-left img, .align-right img {
+        display: none;
+    }
+}
