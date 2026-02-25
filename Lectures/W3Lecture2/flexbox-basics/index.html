@@ -4,63 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Flexbox Basics</title>
-        <style>
-            section {
-                display: flex;
-                background-color: aliceblue;
-                border:solid 2px black;
-                margin:20px;
-            }
-
-            section > * {
-                border: solid 2px red;
-                background-color: black;
-                color: white;
-                min-width: 100px;
-                min-height: 100px;
-            }
-
-            .col {
-                flex-direction: column;
-            }
-
-            .col-reverse {
-                flex-direction: column-reverse;
-            }
-
-            .row-reverse {
-                flex-direction: row-reverse;
-            }
-
-            .justify-centre {
-                justify-content: center;
-            }
-
-            .justify-end {
-                justify-content: end;
-            }
-
-            .space-between {
-                justify-content: space-between;
-            }
-
-            .gap {
-                gap: 30px;
-            }
-
-            .fill-all-space > * {
-                flex-grow: 1;
-            }
-
-            .wrap {
-                flex-wrap: wrap;
-            }
-
-            .full-width {
-                flex-basis: 100%;
-            }
-
-        </style>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
        <section>
@@ -69,6 +13,7 @@
             <p>Paragraph 2</p>
             <div>
                 <p>Paragraph in a div</p>
+                <p>Another paragraph in a div</p>
             </div>
         </section>
         <section class="col">
@@ -77,6 +22,7 @@
             <p>Paragraph 2</p>
             <div>
                 <p>Paragraph in a div</p>
+                <p>Another paragraph in a div</p>
             </div>
         </section>
         <section class="justify-centre">
@@ -85,6 +31,7 @@
             <p>Paragraph 2</p>
             <div>
                 <p>Paragraph in a div</p>
+                <p>Another paragraph in a div</p>
             </div>
         </section>
         <section class="justify-centre gap">
@@ -101,6 +48,7 @@
             <p>Paragraph 2</p>
             <div>
                 <p>Paragraph in a div</p>
+                <p>Another paragraph in a div</p>
             </div>
         </section>
         <section class="space-between">
@@ -109,6 +57,7 @@
             <p>Paragraph 2</p>
             <div>
                 <p>Paragraph in a div</p>
+                <p>Another paragraph in a div</p>
             </div>
         </section>
         <section class="fill-all-space">
@@ -117,6 +66,7 @@
             <p>Paragraph 2</p>
             <div>
                 <p>Paragraph in a div</p>
+                <p>Another paragraph in a div</p>
             </div>
         </section>
         <section class="wrap fill-all-space">
@@ -125,6 +75,7 @@
             <p>Paragraph 2</p>
             <div>
                 <p>Paragraph in a div</p>
+                <p>Another paragraph in a div</p>
             </div>
         </section>
     </body>

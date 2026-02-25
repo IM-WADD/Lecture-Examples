@@ -1,10 +1,16 @@
 .DS_Store
 .vscode
+
+# To ignore previously committed files, run:
+# git rm -r --cached .
+
 Lectures/W1Lecture2/inClassDemo
 Lectures/W2Lecture2/basic-page-in-class
 Lectures/W3Lecture1/responsive-demo
 Lectures/W3Lecture1/media-queries/media-queries-ref.css
 Lectures/W3Lecture2/flexbox-navigation-complete
+Lectures/W3Lecture2/flexbox-navigation/styles-ref.css
+Lectures/W3Lecture2/grid-basics/styles-ref.css
 Lectures/W4Lecture2/counter/countersREF.js
 Lectures/W7Lecture1/displayModeRef
 Lectures/W7Lecture1/clockObjectLiteral
