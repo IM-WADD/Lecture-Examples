@@ -1,0 +1,10 @@
+main {
+    display:flex;
+    justify-content: center;
+}
+
+.container {
+    width:300px;
+    display: flex;
+    flex-wrap: wrap;
+}
