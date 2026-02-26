@@ -3,7 +3,9 @@ body {
 }
 .grid-container {
     /* Create a grid with 5 columns, width auto. There should be two rows, one 20vh and one 80vh */
-
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 20vh 80vh
 }
 .grid-container > * {
     border: solid 1px #333333;
@@ -11,4 +13,7 @@ body {
 
 .grid-container div {
     /* Centre the content with each cell using flexbox, justify and align */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
