@@ -1,4 +1,4 @@
-let numSquares = 50;
+let numSquares = 10;
 const moreContent = document.getElementById("more-content");
 for (let i = 0; i < numSquares; i++) {
     //document.getElementById("more-content").innerHTML += '<div class="more-item"></div>';
