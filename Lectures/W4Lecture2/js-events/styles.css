@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+}
+
+button {
+    height: 50px;
+    width: 200px;
+}
+
+#circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: orange;
+}
