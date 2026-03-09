@@ -15,7 +15,7 @@ body {
 .spinner {
     font-size: 3em;
     color:#00C2C7;
-    animation: spin 2s infinite linear;
+    animation: spin 2s reverse infinite linear;
     margin:auto 50%;
 }
 
@@ -79,16 +79,16 @@ body {
     height:100%;
     background-color:#00C2C7;
     box-shadow:inset 0 0 16px rgb(0, 100, 104);
-    width: "100%";
+    width: 100%;
     animation: progress 10s linear infinite;
 }
 
 @keyframes progress {
     from {
-        width: 0%;
+        left: -100px;
     }
     to {
-        width: 100%;
+        left: 0px;
     }
 }
 
