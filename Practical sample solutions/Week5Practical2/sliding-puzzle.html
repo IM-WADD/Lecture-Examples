@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--
+        CHANGES
+        1. HTML - changed <div> tiles and menu items to <button>, which will automatically get keyboard focus
+        2. JS - changed the tile eventlistener event type from "mouseup" to "click". "click" automatically gets triggered when enter is pressed
+        3. HTML - added wrapper around menu buttons and set display to flex
+        4. HTML - added alt tags to the images
+        5. CSS (keyboard equivalent of hover) - copied the menu-item:hover style to a menu-item:focus style
+    -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles.css" rel="stylesheet"/>
+    <title>Amazing Sliding Puzzle Game!</title>
+</head>
+<body>
+    <nav>
+        <!-- Example implementation of a skip link - not covered in lecture -->
+        <a href="#main" class="screenreader-only skip">Skip to main content</a>
+        <div class="menu">
+            <h1 class="title">Amazing Sliding Puzzle Game!</h1>
+            <div class="button-wrapper">
+                <!-- 
+                    The divs have been replaced with buttons, which are keyboard and screen reader accessible 
+                    The tab order issue has been fixed with CSS - flexbox is used to layout the buttons rather than float
+                 -->
+                 <button class="menu-item" id="show-finished">
+                    show finished puzzle
+                </button>
+                <button class="menu-item" id="shuffle-board">
+                    shuffle board
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 
+        THE GAME BOARD 
+        Elements with class "tile" are the interactive pieces
+        The images are now inside buttons instead of divs. This makes them keyboard and screenreader accessible. All images have 
+        alt tags so a screenreader will know what is in the image.
+    -->
+    <main id="main">
+        <div class="board">
+            <div class="tile-container" id="pos0">
+                <button class="tile">
+                    <img id="img0" src="tile-images/0.jpg" alt="Top left corner of image"/>
+                </button>
+            </div>
+            <div class="tile-container" id="pos1">
+                <button class="tile">
+                    <img id="img1" src="tile-images/1.jpg" alt="Top center of image"/>
+                </button>
+            </div>
+            <div class="tile-container" id="pos2">
+                <button class="tile">
+                    <img id="img2" src="tile-images/2.jpg" alt="Top right of image"/>
+                </button>
+            </div>
+            <div class="tile-container" id="pos3">
+                <button class="tile">
+                    <img id="img3" src="tile-images/3.jpg" alt="Middle left of image"/>
+                </button>
+            </div>
+            <div class="tile-container" id="pos4">
+                <button class="tile">
+                    <img id="img4" src="tile-images/4.jpg" alt="Middle center of image"/>
+                </button>
+            </div>
+            <div class="tile-container" id="pos5">
+                <button class="tile">
+                    <img id="img5" src="tile-images/5.jpg" alt="Middle right of image"/>
+                </button>
+            </div>
+            <div class="tile-container" id="pos6">
+                <button class="tile">
+                    <img id="img6" src="tile-images/6.jpg" alt="Bottom left of image"/>
+                </button>
+            </div>
+            <div class="tile-container" id="pos7">
+                <button class="tile">
+                    <img id="img7" src="tile-images/7.jpg" alt="Bottom center of image"/>
+                </button>
+            </div>
+            <div class="tile-container" id="pos8"></div>
+        </div>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>
