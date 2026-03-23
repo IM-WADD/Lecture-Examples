@@ -1,0 +1,39 @@
+body {
+    margin:0;
+    padding: 5vw;
+    background-color:indianred;
+    color:whitesmoke;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.small {
+    font-size: 0.5rem;
+    font-style: italic;
+}
+
+input[type="button"] {
+    border-radius: 3px;
+    padding:0.2rem 0.5rem;
+    background-color: lightgray;
+    border-color: lightgray;
+    color: black;
+}
+
+#check-answer {
+    background-color: darkslategrey;
+    color:white;
+    border-color: darkslategrey;
+}
+
+#feedback p {
+    animation: wobble 0.5s 4 alternate;
+}
+
+@keyframes wobble {
+    from {
+        transform: translateX(0rem);
+    }
+    to {
+        transform: translateX(1rem);
+    }
+}
