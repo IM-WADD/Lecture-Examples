@@ -5,7 +5,25 @@ const displayMode = document.getElementById("displayMode");
  * the page will use the user's system preference for light or dark mode.
  */
 function updateDisplay() {
-   
+    const selectedMode = displayMode.value;
+    switch (selectedMode) {
+        case "auto":
+            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            if (prefersDark) {
+                setMode("#000000", "#FFF");
+            } else {
+                setMode("#FFFFFF", "#000000");
+            }
+            break;
+        case "light":
+            setMode("#FFFFFF", "#000000");
+            break;
+        case "dark":
+            setMode("#000000", "#FFF");
+            break;
+        default:
+            break;
+    }
 }
 
 /**
