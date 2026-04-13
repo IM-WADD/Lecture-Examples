@@ -25,7 +25,8 @@ function getNameFromStorage() {
     if (userName !== null) {
         // There is a username saved in storage
         return userName;
-    } else {
+    }
+    else {
         // There is no username saved in storage, return a default value
         return "User";
     }

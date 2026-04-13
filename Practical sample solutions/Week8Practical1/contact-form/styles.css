@@ -1,0 +1,59 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    padding: 2em;
+}
+
+.flex-row {
+    display: flex;
+    margin-bottom: 1em;
+    gap: 1em;
+    align-items: baseline;
+}
+
+fieldset {
+    display:flex;
+    flex-direction: column;
+    gap: 0.5em;
+    border: none;
+    padding-left:0;
+    margin-left: 0;
+}
+
+legend {
+    padding-left:0;
+}
+
+#other-pets div {
+    margin-bottom: 1em;
+}
+
+/*
+The recommended technique to hide elements you want to be visible to screen readers but not to other users
+From https://webaim.org/techniques/css/invisiblecontent/
+*/
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+.invalid-feedback {
+    font-size: smaller;
+    font-style: italic;
+    color: darkred;
+}
+
+fieldset .invalid-feedback p {
+    margin-top:0;
+}
+
+/** Follow up questions **/
+#child-ages, label[for=child-ages], #other-pets {
+    display:none;
+}

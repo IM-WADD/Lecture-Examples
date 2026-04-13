@@ -1,26 +1,20 @@
-import { createPageContent } from './content';
-import { createNavigation } from './navigation';
 import './style.css'
+import { createNavigation } from './navigation';
+import { createPageContent } from './content';
 
-const app = document.getElementById("app");
-const page = window.location.pathname;
-
+const app = document.querySelector('#app');
 app.appendChild(createNavigation());
 
+const page = window.location.pathname;
+
 switch (page) {
-    case "/":
-    case "/index.html":
-        app.appendChild(createPageContent(`
-            <h1>Home page</h1>
-            <p>Lorem ipsum etc.</p>
-        `));
-        break;
-    case "/other.html":
-        app.appendChild(createPageContent(`
-            <h1>Other page</h1>
-            <p>Under development</p>
-        `));
-        break;
-    default:
-        app.appendChild(createPageContent("<h1>404</h1><p>Oops. Nothing here.</p>"));
+  case '/':
+  case '/index.html':
+    app.appendChild(createPageContent("<h1>Home</h1><p>Welcome to the home page!</p>"));
+    break;
+  case '/other.html':
+    app.appendChild(createPageContent("<h1>Other</h1><p>This is the other page.</p>"));
+    break;
+  default:
+    app.appendChild(createPageContent("<h1>404</h1><p>Page not found</p>"));
 }
