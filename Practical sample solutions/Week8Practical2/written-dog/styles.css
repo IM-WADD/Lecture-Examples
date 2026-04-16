@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 10%;
+}
+
+.flex-row {
+    display: flex;
+}
+
+.flex-row textarea {
+    width:50%;
+    height: 50vh;
+}
+
+#dog-area {
+    width: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dog-area img {
+    max-width: 100%;
+    max-height:50vh;
+}
+
