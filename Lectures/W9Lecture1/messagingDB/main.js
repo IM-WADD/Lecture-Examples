@@ -90,4 +90,4 @@ document.getElementById("send-button").addEventListener("click", async () => {
     }
 });
 
-// getMessages();
+getMessages();
