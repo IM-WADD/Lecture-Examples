@@ -1,15 +1,16 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-const ball = {
-    x: 25,
-    y: 25,
-    radius: 25,
-    speedX: 2,
-    speedY: 2,
-    directionX: 1,
-    directionY: 1,
-    draw: function() {
+class Ball {
+    x = 25;
+    y = 25;
+    radius = 25;
+    speedX = 2;
+    speedY = 2;
+    directionX = 1;
+    directionY = 1;
+    
+    draw() {
         // Clears the previous drawing
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.beginPath(); // without this, ctx.fill() will redraw all previous frames!
@@ -36,5 +37,6 @@ function draw() {
     window.requestAnimationFrame(draw); // Creates a loop by calling this function recursively
 }
 
+const ball = new Ball();
 // Create the first frame
 window.requestAnimationFrame(draw);
